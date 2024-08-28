@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white_inverse"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+
+    <TextView
+        android:id="@+id/dateTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/seguisb"
+        android:text="12/08/2021 10:14 PM"
+        android:textColor="@color/color_black_inverse"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/vehicleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/segoeui"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/journeyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/seguisb"
+        android:gravity="center"
+        android:minLines="2"
+        android:text="12 min"
+        android:textColor="@color/color_black_inverse"
+        android:textSize="10sp" />
+
+</RelativeLayout>

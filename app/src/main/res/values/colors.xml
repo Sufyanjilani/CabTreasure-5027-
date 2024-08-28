@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_action_bar_splitter">#000000</color>
+    <!--
+        Main App COLORS
+        #ffcf09     YELLOW
+        #f7f6f2     Background / WHITE
+        #231f20     GREY DARK
+        #000000     BLACK
+
+    ////////////////////////////////////////////////
+    -->
+    <color name="app_main">#f7f6f2</color>
+    <color name="app_bg">#f7f6f2</color>
+    <color name="app_grey">#231f20</color>
+    <color name="app_black">#000000</color>
+    <color name="app_bg_white">#ffffff</color>
+    <color name="app_white">#ffffff</color>
+    <color name="app_text_black">#000000</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+
+
+    <!--
+        Header
+    -->
+    <color name="activity_header_bg">#232835</color>
+    <color name="activity_header_border">#232835</color>
+    <color name="activity_header_text">#000000</color>
+    <!--
+        Form fields
+    -->
+    <color name="form_field_bg">#000000</color>
+    <color name="form_field_text_hint">#7e7e7e</color>
+    <color name="form_field_text_white">#f7f6f2</color>
+    <color name="form_field_text_black">#000000</color>
+    <color name="border_color_inverse">@color/color_gray_and_footer_inverse</color>
+    <!--
+        Buttons
+    -->
+    <color name="button_bg">#000000</color>
+    <color name="button_bg_focus">#ffcf09</color>
+    <color name="button_text">#7e7e7e</color>
+    <color name="button_text_white">#f7f6f2</color>
+    <!--
+        ListViews
+    -->
+    <color name="LV_bg">#f7f6f2</color>
+    <!--
+        Booking Confirmed
+    -->
+    <color name="confirmed_booking_heading">#05a906</color>
+    <color name="buttoncolor_inverse">#FFFFFF</color>
+    <!--
+        Fares
+    -->
+    <color name="fares">#5a7f0d</color>
+    <!--
+        Booking Vehicle List
+    -->
+    <color name="booking_vehicle_list_border">#d3d3d3</color>
+    <color name="booking_vehicle_list_text">#88929b</color>
+    <!--
+        Comon
+    -->
+    <color name="bg_black">#000</color>
+    <color name="bg_white">#fff</color>
+    <color name="txt_black">#000</color>
+    <color name="txt_white">#fff</color>
+    <color name="red1">#d22f32</color>
+    <color name="Greencolor">#05a906</color>
+    <color name="GreencolorLight">#05a906</color>
+
+    <!--
+        Booking Status colors
+    -->
+    <color name="Green_textcolor">#05a906</color>
+    <color name="red_textcolor">#FF0000</color>
+    <color name="Yellow_textcolor">#FFE500</color>
+    <color name="pink_textcolor">#FF009C</color>
+    <color name="stc_color">#28CFE4</color>
+
+
+</resources>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<!--
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-22dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/color_card_inverse"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/aaaaaaa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/backIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:elevation="5dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back__" />
+
+                &lt;!&ndash;pickup_box_1&ndash;&gt;
+                <RelativeLayout
+                    android:id="@+id/pickup_box_Rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backIv"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_card_inverse"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pickupIv"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:src="@drawable/point"
+                        app:tint="@color/color_black_inverse" />
+
+                    <EditText
+                        android:id="@+id/pickupEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toRightOf="@+id/pickupIv"
+                        android:background="@drawable/all_round"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/segoeuil"
+                        android:gravity="center_vertical|start"
+                        android:hint="Search address"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="4dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_black_inverse"
+                        android:textColorHint="#AEACAC"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/pickUpClearEdittextIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="37dp"
+                        android:elevation="2dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="#B3B0B0" />
+
+                    <TextView
+                        android:id="@+id/pickupTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_toRightOf="@+id/pickupIv"
+                        android:background="@color/color_card_inverse"
+                        android:fontFamily="@font/segoeuib"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Pickup"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_inverse_black_footerBack"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                &lt;!&ndash;via_1_box_2&ndash;&gt;
+                <RelativeLayout
+                    android:id="@+id/via_1_box_Rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backIv"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_card_inverse"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/via_2_Iv"
+                        android:layout_width="10dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/avatar_circle"
+                            android:backgroundTint="@color/color_black_inverse"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/color_black_inverse" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/via_1_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toLeftOf="@+id/delete_via_1_Iv"
+                        android:layout_toRightOf="@+id/via_2_Iv"
+                        android:background="@drawable/all_round"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/segoeuil"
+                        android:gravity="center_vertical|start"
+                        android:hint="Search address"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="4dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_black_inverse"
+                        android:textColorHint="#AEACAC"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/via_1_ClearEdittextIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/delete_via_1_Iv"
+                        android:elevation="2dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="#B3B0B0" />
+
+                    <TextView
+                        android:id="@+id/via_2_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_toRightOf="@+id/via_2_Iv"
+                        android:background="@color/color_card_inverse"
+                        android:fontFamily="@font/segoeuib"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Add Stop 1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_inverse_black_footerBack"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/delete_via_1_Iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/color_black_inverse" />
+
+                </RelativeLayout>
+
+                &lt;!&ndash;via_2_box_3&ndash;&gt;
+                <RelativeLayout
+                    android:id="@+id/via_2_box_Rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backIv"
+                    android:layout_gravity="center"
+                    android:background="@color/color_card_inverse"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/via_1_Iv"
+                        android:layout_width="10dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp">
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/avatar_circle"
+                            android:backgroundTint="@color/color_black_inverse"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/color_black_inverse" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/via_2_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toLeftOf="@+id/delete_via_2_Iv"
+                        android:layout_toRightOf="@+id/via_1_Iv"
+                        android:background="@drawable/all_round"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/segoeuil"
+                        android:gravity="center_vertical|start"
+                        android:hint="Search address"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="4dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_black_inverse"
+                        android:textColorHint="#AEACAC"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/via_1_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/via_1_Iv"
+                        android:background="@color/color_card_inverse"
+                        android:fontFamily="@font/segoeuib"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Add Stop 2"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_inverse_black_footerBack"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/via_2_ClearEdittextIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/delete_via_2_Iv"
+                        android:elevation="2dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="#B3B0B0" />
+
+                    <ImageView
+                        android:id="@+id/delete_via_2_Iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/color_black_inverse" />
+
+                </RelativeLayout>
+
+                &lt;!&ndash;drop_box_4&ndash;&gt;
+                <RelativeLayout
+                    android:id="@+id/dropoff_box_Rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backIv"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_card_inverse"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/dropoffIv"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:src="@drawable/ic_pin"
+                        app:tint="@color/color_black_inverse" />
+
+                    <EditText
+                        android:id="@+id/dropoffEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toRightOf="@+id/dropoffIv"
+                        android:background="@drawable/all_round"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/segoeuil"
+                        android:gravity="center_vertical|start"
+                        android:hint="Search address"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="4dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_black_inverse"
+                        android:textColorHint="#AEACAC"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/dropOffClearEdittextIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="37dp"
+                        android:elevation="2dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="#B3B0B0" />
+
+                    <TextView
+                        android:id="@+id/dropoffTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_toRightOf="@+id/dropoffIv"
+                        android:background="@color/color_card_inverse"
+                        android:fontFamily="@font/segoeuib"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Dropoff"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_inverse_black_footerBack"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addViaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aaaaaaa"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="30dp"
+                android:gravity="right|center_vertical"
+                android:padding="10dp"
+                android:text=" + Add (Via)"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addViaTv"
+                android:layout_marginBottom="-8dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/color_inverse_black_footerBack"
+                android:progressTint="@color/app_black"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+-->
+
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_more_gray_and_white_inverse"
+    android:paddingLeft="4dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <RelativeLayout
+        android:id="@+id/pDRl"
+        android:layout_width="20dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:id="@+id/pickupIv"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_above="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_strokes"
+            android:scaleType="fitXY" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/line_gradient" />
+
+        <ImageView
+            android:id="@+id/dropOffIv"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_below="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/square_strokes" />
+
+    </RelativeLayout>
+
+    <!--PICK UP-->
+    <RelativeLayout
+        android:id="@+id/pickUpRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/receiptLl"
+        android:layout_toRightOf="@+id/pDRl"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/pickUpTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:text="Please wait..."
+            android:textAllCaps="false"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="14sp"
+
+            android:fontFamily="@font/seguisb"/>
+
+        <TextView
+            android:id="@+id/pickUpSubTitleTv"
+            android:layout_width="match_parent"
+            android:layout_marginTop="-2dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/pickUpTitleTv"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/seguisb"
+            android:text="Getting Location..."
+            android:textColor="@color/color_black_inverse"
+
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <!--DROP OFF-->
+    <RelativeLayout
+        android:id="@+id/dropOffRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickUpRl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/receiptLl"
+        android:layout_toRightOf="@+id/pDRl"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/dropOffTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/seguisb"
+            android:text="Please wait..."
+            android:textAllCaps="false"
+            android:textColor="@color/color_black_inverse"
+         />
+
+        <TextView
+            android:id="@+id/dropOffSubTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dropOffTitleTv"
+            android:layout_marginTop="-2dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/seguisb"
+            android:text="Getting Location..."
+            android:textColor="@color/color_black_inverse"
+           />
+
+    </RelativeLayout>
+
+    <!--VIA-->
+    <include layout="@layout/layout_via_common" />
+
+    <TextView
+        android:id="@+id/tipFaresTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/segoeuib"
+        android:gravity="center"
+        android:padding="5dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Tip: $3.0"
+        android:textColor="@color/footerBack"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+
+        android:id="@+id/receiptLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/color_black_and_light_inverse"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="6dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_receipt"
+            android:tint="#666"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/receiptLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:text="Receipt"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#F8F5F5"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Peak Factor"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_peak" />
+
+            <TextView
+                android:id="@+id/peakFactorTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/segoeuil"
+                android:gravity="center"
+                android:text="1.5X"
+                android:textColor="#666"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center"
+                android:text="Peak pricing gets you cabs when"
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center"
+                android:text="demand is high."
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_inverse_black_footerBack"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Confirm Fare"
+                android:textColor="@color/app_bg_white"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

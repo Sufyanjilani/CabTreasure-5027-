@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/curveHeaderRl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ic_toplargecurveIv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="-48dp"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/ic_toplargecurve" />
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_backspace"
+        android:tint="@color/app_bg_white" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/backIv"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/segoeuib"
+        android:gravity="center"
+        android:text="SUPPORT"
+        android:textColor="@color/app_bg_white"
+        android:textSize="22sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/refNoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTv"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-5dp"
+        android:layout_toRightOf="@+id/backIv"
+        android:fontFamily="@font/seguisb"
+        android:text="Book Ref: 750125"
+        android:textColor="@color/app_bg_white"
+        android:textSize="12dp" />
+
+</RelativeLayout>

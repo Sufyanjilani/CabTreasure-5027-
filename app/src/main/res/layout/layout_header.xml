@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerRl"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/color_white_inverse"
+    android:orientation="horizontal">
+
+    <include layout="@layout/layout_menu_button" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+      style="@style/entryScreenHeadingStyle"
+        android:text="Title Heading"
+        android:textAllCaps="true"
+        android:textColor="@color/color_black_inverse"
+       />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="Version"
+        android:textColor="@color/app_black"
+        android:visibility="gone" />
+
+</RelativeLayout>
+

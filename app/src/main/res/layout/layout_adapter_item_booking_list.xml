@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_gray_and_white_inverse"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+android:backgroundTint="@color/app_color_primary_black"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/vechicle_item_selected_background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/app_color_primary_black"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/shoppingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@+id/C_refNO"
+                    android:background="@drawable/rounded_bottomtwo"
+                    android:gravity="center"
+
+                    android:paddingTop="2dp"
+
+                    android:paddingBottom="2dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/store_s"
+                        android:tint="@color/app_white"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/seguisb"
+                        android:paddingEnd="3dp"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:text="Shopping collection"
+                        android:textColor="@color/app_white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/C_Time"
+                    android:drawableStart="@drawable/ic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center|center_vertical"
+android:layout_alignParentEnd="true"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="13/01/2023 14:50"
+                    android:textColor="@color/app_white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/segoeuib"
+                    android:text="Trip #1"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/C_refNO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/seguisb"
+                    android:text="Ref  :000000"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/app_white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/C_Address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/segoeui"
+                        tools:text="Address" />
+
+                    <TextView
+                        android:id="@+id/Sub_Address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:fontFamily="@font/segoeui"
+                        android:maxLines="1"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="15sp"
+                        tools:text="Sub Address" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:elevation="2dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_back__"
+                    app:tint="@color/color_black_inverse" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/arrow"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/C_drop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/C_Address"
+                        android:layout_alignLeft="@+id/C_Address"
+                        android:layout_alignRight="@+id/C_Time"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_black_inverse"
+
+                        android:textSize="15sp"
+                        android:fontFamily="@font/segoeui"
+                        tools:text="Dropoff" />
+
+                    <TextView
+                        android:id="@+id/Sub_Address_drop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+
+                        android:maxLines="1"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/segoeui"
+                        tools:text="Sub Address" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_vias" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/bg_white" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray_and_footer_inverse"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="2dp"
+                android:orientation="horizontal">
+<!--                -->
+                <LinearLayout
+                    android:id="@+id/C_Status_lyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26dp"
+                    android:background="@drawable/outlineaboutweb"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+                    <!--                    color_gray_and_black_inverse-->
+                    <TextView
+                        android:id="@+id/C_Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/segoeuib"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Confirming"
+                        android:textColor="@color/app_white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/car_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_car"
+                    app:tint="@color/app_white" />
+
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/car_img"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                      android:layout_margin="10dp"
+
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/carName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/segoeuib"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/app_white"
+                        android:textSize="15sp"
+                        tools:text="ANY VEHICLE" />
+
+                    <TextView
+                        android:id="@+id/fare_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeuib"
+                        android:maxLines="1"
+                        android:textColor="@color/app_white"
+                        android:textSize="22sp"
+                        tools:text="$16.40" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/carPlate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="-6dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="VGZ-182"
+                    android:textColor="@color/txt_color_dark"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/bg_white" />
+
+
+            <LinearLayout
+                android:id="@+id/actionLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/booking_detail_con"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/C_track"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/C_Time"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:backgroundTint="#434343"
+                    android:fontFamily="@font/segoeuib"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="5dp"
+                    android:text="Track Driver"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp" />
+                <!--                android:background="@drawable/bordered_button"-->
+                <View
+                    android:id="@+id/lineView"
+                    android:layout_width="0.5dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="#666" />
+
+                <TextView
+                    android:id="@+id/C_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/C_Time"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:backgroundTint="#434343"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="5dp"
+                    android:text="Cancel Booking"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

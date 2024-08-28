@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end"
+        app:duration="300">
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/carIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:backgroundTint="#eee"
+            android:paddingStart="20dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/executive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <Constraint
+            android:id="@+id/description"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/carIv"
+            android:layout_toRightOf="@+id/carIv"
+            android:orientation="horizontal"
+            app:layout_goneMarginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/carIv"
+            app:layout_constraintEnd_toStartOf="@+id/fareRl"
+            app:layout_constraintStart_toEndOf="@+id/carIv"
+            app:layout_constraintTop_toTopOf="@+id/carIv"
+            />
+
+        <Constraint
+            android:id="@+id/fareRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            app:visibilityMode="ignore"
+            android:layout_centerVertical="true"
+            app:layout_constraintBottom_toBottomOf="@+id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/description"
+            />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/carIv"
+
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fareRl"
+            app:layout_constraintStart_toEndOf="@+id/description"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:layout_width="150dp"
+            android:id="@+id/description"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:layout_goneMarginStart="20dp"
+            android:layout_toEndOf="@+id/carIv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp" />
+
+
+        <Constraint
+            android:id="@+id/fareRl"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:visibilityMode="ignore"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:layout_constraintBottom_toBottomOf="@+id/carIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/carIv"/>
+    </ConstraintSet>
+
+
+
+</MotionScene>

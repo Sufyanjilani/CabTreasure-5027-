@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tool:cardBackgroundColor="@color/color_more_gray_and_white_inverse"
+    tool:cardCornerRadius="10dp"
+    tool:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        android:weightSum="9"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:rotation="50"
+                android:tint="@color/color_footer__white_inverse"
+                android:src="@drawable/ic_airplane" />
+
+            <ImageView
+                android:id="@+id/dropPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_pin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/dropPin"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/flightNoH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Flight Number"
+                    android:textAlignment="textEnd"
+                    android:textColor="#666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/flightNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seguisb"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="14sp"
+                    tools:text="Flight Number 19 C-B" />
+
+                <TextView
+                    android:id="@+id/arriveFromH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statusTv"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/dropPin"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Arriving From"
+                    android:textColor="#666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/arriveFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/arriveFromH"
+                    android:layout_toRightOf="@+id/dropPin"
+
+                    android:layout_marginRight="3dp"
+                    android:maxLines="2"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/seguisb"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="14sp"
+                    tools:text="Coming From Istambul" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="">
+
+            <TextView
+                android:id="@+id/statusTvH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:text="Status"
+                android:textSize="12sp"
+                android:textColor="#666" />
+
+            <TextView
+                android:id="@+id/statusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusTvH"
+                android:fontFamily="@font/seguisb"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="12sp"
+                tools:text="Schedule" />
+
+            <TextView
+                android:id="@+id/dateTimeH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusTv"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/segoeui"
+                android:text="Date"
+                android:textColor="#666"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateTimeH"
+                android:fontFamily="@font/seguisb"
+                android:maxLines="2"
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="12sp"
+                tools:text="19-Dec-21" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="home_header">45dp</dimen>
+    <dimen name="drawable_padding">5dp</dimen>
+    <dimen name="maps_padding">75dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="divider">2dp</dimen>
+    <dimen name="animated_expandable_edit_text_expanded_height">35dp</dimen>
+    <integer name="animated_expanded_edit_text_animation_duration_milliseconds">400</integer>
+
+</resources>

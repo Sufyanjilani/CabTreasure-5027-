@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    app:behavior_hideable="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/color_gray_and_white_inverse"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeBottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="20dp"
+                android:src="@drawable/ic_back__" />
+
+            <TextView
+                android:id="@+id/chatTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/closeBottomSheet"
+                android:layout_weight="1"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="center"
+                android:text="Chat with Driver"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/chatStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chatTitleTv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/closeBottomSheet"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center"
+                android:text="Typing .."
+                android:textAllCaps="false"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:weightSum="5">
+
+
+                <TextView
+                    android:id="@+id/statusLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corners_label"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="Expired"
+                    android:textColor="@color/app_white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/color_gray_and_white_inverse"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/chatEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/sendIv"
+                android:background="@drawable/flight_outline"
+                android:focusable="true"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_vertical"
+                android:hint="Enter Message"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapCharacters"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#B6B6B6"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/sendIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_send" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomChat"
+        android:layout_below="@+id/header">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/layout_adapter_item_chat" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/color_gray_and_black_inverse" />
+
+</RelativeLayout>

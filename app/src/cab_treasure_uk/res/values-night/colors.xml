@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Main App COLORS
+        #D9C473     YELLOW
+        #FAFAFA     Background
+        #000000     BLACK
+
+        #323433     GREY DARK / Border
+        #6D6F6E     GREY LIGHT
+
+    ////////////////////////////////////////////////
+    -->
+    <color name="app_main">#ffffff</color>
+    <color name="app_secondary">#000</color>
+    <color name="app_border">#000</color>
+    <color name="dark_blue">#1F9244</color>
+    <color name="app_bg">#f7f7f7</color>
+    <color name="app_grey">#373a41</color>
+    <color name="app_grey_light">#C8CDD7</color>
+    <color name="app_grey_dark">#78849E</color>
+    <color name="buttoncolor_inverse">#000000</color>
+    <color name="app_secondary_black">#000000</color>
+    <!--    MAIN COLORS NIGHT START-->
+    <color name="color_confirmed_completed">#23C552</color>
+    <color name="color_gray_and_footer_inverse">#2C2C2C</color>
+    <color name="color_light_gray_and_footer_inverse">#D5D6DA</color>
+    <color name="color_white_gray">#78849E</color>
+    <color name="color_red">#E20613</color>
+    <color name="color_cancelled">#F84F31</color>
+    <color name="color_on_route">#a8a8a8</color>
+    <color name="color_on_board">#7cd992</color>
+    <color name="color_on_arrived">#28CC2D</color>
+    <color name="color_on_stc">#3581d8</color>
+    <color name="border_color_inverse">#a8a8a8</color>
+    <color name="grey_transparent_inverse">#00000000</color>
+    <color name="color_home_work_inverse">#000</color>
+    <color name="app_color_primary">#000000</color>
+    <color name="app_color_primary_white">#ffffff</color>
+    <color name="app_color_primary_black">#000</color>
+    <color name="color_footer__white_inverse">#ffffff</color>
+    <color name="footerBack_white">#ffffff</color>
+    <color name="footerBack_black">#000</color>
+
+    <color name="color_card_inverse">#252A30</color>
+
+    <color name="color_gray_and_black_inverse">#2C2C2C</color>
+    <color name="color_gray_and_red_inverse">#2C2C2C</color>
+    <color name="color_gray_and_light_inverse">#2C2C2C</color>
+    <color name="color_gray_and_white_inverse">#2C2C2C</color>
+
+    <color name="color_dark_gray_and_light_inverse">#1E1E1E</color>
+    <color name="color_more_gray_and_white_inverse">#171717</color>
+
+    <color name="color_footer_light_more_gray_inverse">#171717</color>
+    <color name="color_white_inverse">#000</color>
+    <color name="color_hint_text_color_inverse">#666</color>
+
+    <color name="color_black_and_light_inverse">#000</color>
+    <color name="color_black_and_gray_inverse">#2C2C2C</color>
+    <color name="color_black_and_red_inverse">#000</color>
+    <color name="color_black_inverse">#fff</color>
+    <color name="gray_color">#676767</color>
+    <!--    MAIN COLORS NIGHT END-->
+    <color name="color_light_gray_inverse">#171717</color>
+
+    <color name="app_grey_phone">#11E7E9ED</color>
+    <color name="app_black">#000000</color>
+    <color name="app_bg_white">#FFFFFF</color>
+    <color name="app_white">#FFFFFF</color>
+    <color name="bgView">#FBF6F6</color>
+    <color name="app_color_black_inverse">#000</color>
+    <color name="app_text_black">#000000</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="indigo_700">#303f9f</color>
+    <color name="cyan_500">#FF2C94</color>
+    <color name="disable_text">#DDDEE3</color>
+    <color name="slider_background">#070707</color>
+    <color name="promo_background">#F9A01A</color>
+
+    <color name="color_light_gray_and_white_inverse">#FFFFFF</color>
+
+    <!--
+        Header
+        new colors
+    -->
+    <color name="invisible">#08FFFFFF</color>
+    <color name="activity_header_bg">#000</color>
+    <color name="activity_header_border">#000</color>
+    <color name="grey_background">#F7F7FA</color>
+    <color name="grey_background_info">#fafafa</color>
+    <color name="activity_header_text">#fff</color>
+    <color name="drawer_head_bg">#1F9244</color>
+    <color name="car_underline">#1F9244</color>
+    <color name="ripple_color">#000</color>
+    <color name="bar_color">#c9c9c9</color>
+    <color name="dark_black">#000000</color>
+    <color name="light_black">#242424</color>
+    <color name="txt_color_dark">#333333</color>
+    <color name="txt_color_light">#d7d6dc</color>
+    <color name="active">#d7d6dc</color>
+    <color name="deactive">#FBFBFB</color>
+    <color name="menu_txt">#fff</color>
+    <color name="vehicle_txt">#cac9c9</color>
+    <color name="cash_card_txt">#8d8d8d</color>
+    <color name="login_field">#444850</color>
+    <color name="login_field_shadow">#C8CDD7</color>
+    <color name="booknow_light">#E20613</color>
+    <color name="booknow_dark">#E20613</color>
+    <color name="text_heading">#070707</color>
+    <color name="text_content">#454f63</color>
+    <color name="img_avatar">#E20613</color>
+    <color name="signup_background">#FDE401</color>
+    <color name="subtext_color">#8992A7</color>
+    <color name="payment_grey">#ABB1C1</color>
+    <color name="vehDropBack">#52AB6F</color>
+    <color name="drvNotesBack">#1F9244</color>
+    <color name="loginButtonBack">#E20613</color>
+
+
+    <color name="selectedVehicleColor">#E20613</color>
+
+    <color name="confirmTextColor">#fff</color>
+
+    <color name="logintext">#000</color>
+    <color name="loginbuttontext">#fff</color>
+    <color name="edit_field_text_color">#fff</color>
+    <color name="edit_field_placeholder_text_color">#fff</color>
+
+    <color name="edit_field_mobile_hint_text_color">#666</color>
+
+
+    <color name="app_white_line">#40ABB1C1</color>
+    <color name="login_label">#1F9244</color>
+    <color name="footerBack">#fff</color>
+    <color name="color_inverse_footerBack_black">#E6BD25</color>
+    <color name="color_inverse_black_footerBack">#fff</color>
+    <color name="color_inverse_ball">#171717</color>
+    <color name="transparent">@android:color/transparent</color>
+    <!--
+        Form fields
+    -->
+    <color name="form_field_bg">#000000</color>
+    <color name="form_field_text_hint">#000000</color>
+    <color name="form_field_text_white">#FFFFFF</color>
+    <color name="form_field_text_black">#000000</color>
+    <!--
+        Buttons
+    -->
+    <color name="button_bg">#6D6F6E</color>
+    <color name="button_bg_focus">#323433</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="hint_color">#f9f9f9</color>
+    <color name="errorColor">#ff0000</color>
+    <!--
+        ListViews
+    -->
+    <color name="LV_bg">#FFFFFF</color>
+    <!--
+        Booking Confirmed
+    -->
+    <color name="confirmed_booking_heading">#05a906</color>
+    <!--
+        Fares
+    -->
+    <color name="fares">#5a7f0d</color>
+    <!--
+        Booking Vehicle List
+    -->
+    <color name="booking_vehicle_list_border">#d3d3d3</color>
+    <color name="booking_vehicle_list_text">#88929b</color>
+    <!--
+        Comon
+    -->
+    <color name="bg_black">#000</color>
+    <color name="bg_white">#fff</color>
+
+    <color name="txt_black">#000</color>
+    <color name="txt_white">#fff</color>
+    <color name="red">#C00000</color>
+    <color name="Greencolor">#05a906</color>
+    <color name="GreencolorLight">#05a906</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="main_app_color">#ffcf4c29</color>
+    <color name="color_one">#666666</color>
+    <color name="color_two">#fff666</color>
+    <color name="color_three">#001100</color>
+    <color name="blue">#0088E5</color>
+
+
+    <color name="job_detail_text_color">#fff</color>
+    <color name="job_detail_bg_color">#161A25</color>
+
+
+    <color name="hintTextColor">#C5C5C5</color>
+    <color name="textColor">#232835</color>
+
+
+
+
+
+</resources>

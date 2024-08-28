@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white_inverse"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="-100dp"
+            android:layout_marginBottom="-50dp"
+            android:alpha="0.5"
+            android:src="@drawable/avatar_circle"
+            android:tint="@color/color_inverse_ball"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:alpha="0.5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginBottom="-25dp"
+            android:src="@drawable/avatar_circle"
+            android:tint="@color/color_inverse_ball"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/centerIv"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_centerInParent="true"
+            android:padding="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_bg_img" />
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/loginBtnTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/color_inverse_black_footerBack"
+                android:padding="13dp"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@color/buttoncolor_inverse"
+                style="@style/entryScreenButtonStyle"
+                />
+
+            <TextView
+                android:id="@+id/registerBtnTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/oval_border"
+                style="@style/entryScreenButtonStyle"
+                android:padding="13dp"
+                android:text="Register"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/color_inverse_black_footerBack"
+               />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ic_toplargecurveIv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="-38dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_toplargecurve" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/segoeuil"
+            android:text="WELCOME TO"
+            android:textColor="@color/app_bg_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup"
+            android:layout_marginLeft="26dp"
+            style="@style/entryScreenHeadingStyle"
+            android:text="@string/app_name_start"
+            android:textAllCaps="false"
+            android:textColor="@color/app_bg_white"
+          />
+
+    </RelativeLayout>
+
+</RelativeLayout>

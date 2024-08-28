@@ -1,0 +1,186 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_white_inverse"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+
+            android:id="@+id/rvVehicleRoot"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+      android:background="@drawable/vechicle_item_selected_background"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+<!--            <View-->
+<!--                android:id="@+id/viewBg"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/color_dark_gray_and_light_inverse"-->
+<!--                android:visibility="visible" />-->
+
+<!--            <View-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginLeft="26dp"-->
+<!--                android:background="@drawable/avatar_circle"-->
+<!--                android:backgroundTint="@color/color_card_inverse" />-->
+
+            <ImageView
+                android:id="@+id/carIv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#eee"
+                 android:paddingStart="20dp"
+                android:paddingBottom="1dp"
+                android:paddingTop="1dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/executive" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toStartOf="@+id/fareRl"
+                android:layout_toEndOf="@+id/carIv"
+                android:layout_toRightOf="@+id/carIv"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/carNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/seguisb"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="Saloon car"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/passen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/p"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:id="@+id/carPassTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/segoeui"
+                        android:layout_toRightOf="@+id/p"
+                        android:drawableTint="#989898"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="x 4"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/fareRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fare_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/carFaresTv"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/seguisb"
+                        android:text="100"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/carFaresTv"
+                        android:includeFontPadding="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seguisb"
+                        android:text="0"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/fare_txtlabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carFaresTv"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/seguisb"
+                        android:text="Estimated"
+                        android:textColor="@color/color_light_gray_and_white_inverse"
+
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:id="@+id/meterInfo"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+
+                    android:src="@drawable/ic_fare_info"
+                    android:visibility="gone" />
+
+<!--                android:layout_toRightOf="@+id/carFaresTv"-->
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

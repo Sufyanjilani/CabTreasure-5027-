@@ -1,0 +1,54 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+
+    -->
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- API 14 theme customizations can go here. -->
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="colorPrimaryDark">@color/app_border</item>
+      <!--  <item name="stickyListHeadersListViewStyle">@style/Widget.MyApp.ListView</item>-->
+
+    </style>
+    <!--    <item name="android:windowBackground">@drawable/background</item>-->
+
+    <style name="splashBase" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/splashBackground</item>
+        <item name="colorPrimaryDark">@color/splashBackground</item>
+       <!-- <item name="stickyListHeadersListViewStyle">@style/Widget.MyApp.ListView</item>-->
+
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MyEditTextStyle2" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">#fff</item>
+        <item name="colorControlNormal">#fff</item>
+
+    </style>
+
+    <style name="Widget.MyApp.ListView" parent="@android:style/Widget.ListView">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/red1</item>
+        <item name="colorPrimaryDark">@color/red1</item>
+        <item name="colorAccent">@color/red1</item>
+    </style>
+
+</resources>

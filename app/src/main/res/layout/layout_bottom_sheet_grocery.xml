@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_more_gray_and_white_inverse"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="60dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/closeBottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/promotitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+android:layout_centerVertical="true"
+android:layout_toEndOf="@+id/closeBottomSheet"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:text="Add Order Details"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/doneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_corners_asapfilled"
+            android:backgroundTint="@color/color_inverse_black_footerBack"
+            android:elevation="2dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="5dp"
+            android:text="Done"
+            android:textColor="@color/buttoncolor_inverse"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="350dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/seguisb"
+            android:textSize="16sp"
+            android:text="Order Number"
+            android:textColor="#666"
+         />
+
+        <EditText
+            android:id="@+id/bottomSheetEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:background="@drawable/flight_outline"
+            android:focusable="true"
+
+            android:hint="Type your order number"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/color_black_inverse"
+            android:textColorHint="#B6B6B6"
+            android:fontFamily="@font/segoeui"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bottomSheetEt"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+
+            android:text="Name on Order"
+            android:textColor="#666"
+            android:fontFamily="@font/seguisb"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/bottomSheetEt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title2"
+            android:background="@drawable/flight_outline"
+            android:focusable="true"
+            android:hint="Type name on order"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/color_black_inverse"
+            android:textColorHint="#B6B6B6"
+            android:fontFamily="@font/segoeui"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/clearFilterTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bottomSheetEt2"
+            android:layout_marginTop="10dp"
+
+            android:padding="5dp"
+            android:text="Clear"
+            android:textColor="@color/color_black_inverse"
+            android:fontFamily="@font/segoeui"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

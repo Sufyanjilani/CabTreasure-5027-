@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobileLyt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/errMobile_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/segoeuisl"
+        android:text="Mobile No required"
+        android:textColor="@color/errorColor"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <net.rimoto.intlphoneinput.IntlPhoneInput
+        android:id="@+id/my_phone_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/transparent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:flagPaddingBottom="4dp"
+        app:flagPaddingStart="10dp"
+        app:flagPaddingTop="4dp"
+        app:textColor="@color/color_black_inverse"
+        app:textColorHint="#666"
+        app:textSize="16sp" />
+
+</RelativeLayout>
+

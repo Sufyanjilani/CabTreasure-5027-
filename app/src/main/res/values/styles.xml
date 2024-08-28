@@ -1,0 +1,54 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+       <!-- <item name="stickyListHeadersListViewStyle">@style/Widget.MyApp.ListView</item>-->
+        <item name="colorPrimaryDark">@color/app_border</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="MyEditTextStyle2" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">#fff</item>
+        <item name="colorControlNormal">#fff</item>
+
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- custom style -->
+    <style name="booknow" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <!--<item name="android:button">@drawable/radio_checked</item>-->
+    </style>
+
+    <style name="Widget.MyApp.ListView" parent="@android:style/Widget.ListView">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+    <!-- custom Alert Dialog style -->
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@color/red1</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@color/red1</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/alertdialogcustom</item>
+        <!--dialog textSize-->
+        <item name="android:textSize">30dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_and_light_inverse">
+
+    <include layout="@layout/layout_header_curve" />
+
+    <ScrollView
+        android:id="@+id/viewsSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/curveHeaderRl"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/list" />
+
+            <LinearLayout
+                android:id="@+id/findLostItemLv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Enter Description"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/descriptionEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="14dp"
+                    android:background="@drawable/flight_outline"
+                    android:focusedByDefault="false"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="left"
+                    android:hint="Enter details of stolen item"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minLines="3"
+                    android:padding="10dp"
+                    android:textColor="@color/color_black_inverse"
+                    android:textColorHint="@color/color_black_inverse"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="We will share your phone number with driver so they can contact you soon."
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Enter Number"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="12sp" />
+
+                <include layout="@layout/layout_mobile_number_edit_text" />
+
+                <include layout="@layout/layout_button_with_progress" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:indeterminateTint="@color/app_bg_white" />
+
+</RelativeLayout>

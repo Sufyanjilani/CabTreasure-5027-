@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="3dp">
+
+    <RelativeLayout
+        android:id="@+id/curverBgRl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/color_more_gray_and_white_inverse"
+        android:elevation="1dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="1dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:id="@+id/numberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center"
+            android:text="1)"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/complainTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/numberTv"
+            android:fontFamily="@font/segoeui"
+            android:text="Contact driver about a lost item"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="14sp" />
+
+        <Switch
+            android:id="@+id/switchS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:trackTint="@color/color_black_inverse" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

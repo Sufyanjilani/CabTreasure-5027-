@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/confirmBtn"
+        android:layout_below="@+id/headerRl"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+ style="@style/entryScreenDescriptionStyle"
+            android:gravity="center"
+            android:text="Enter your country and mobile number and we will send you a verification code via sms"
+            android:textColor="@color/color_black_inverse"
+            />
+
+        <LinearLayout
+            android:id="@+id/mobileLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <net.rimoto.intlphoneinput.IntlPhoneInput
+                android:id="@+id/my_phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_corners_phone"
+                android:paddingLeft="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/segoeui"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:flagPaddingBottom="4dp"
+                app:flagPaddingStart="10dp"
+                app:flagPaddingTop="4dp"
+                app:textColor="@color/app_black"
+                app:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emaillyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_corners_phone"
+                android:hint="Enter Your Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#666"
+                style="@style/inputTextStyle"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/color_inverse_black_footerBack"
+        style="@style/entryScreenButtonStyle"
+        android:text="Confirm"
+        android:textColor="@color/buttoncolor_inverse"
+        />
+
+</RelativeLayout>

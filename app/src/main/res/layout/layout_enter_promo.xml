@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="20dp"
+                android:src="@drawable/ic_back__" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/promotitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/segoeuiz"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:text="Promo Code"
+                    android:textColor="@color/app_white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/statusLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corners_label"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="Expired"
+                    android:textColor="@color/app_white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/promologo" />
+
+        <EditText
+            android:id="@+id/inpPromo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_corners_promofield"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center"
+            android:hint="Enter Code Here"
+            android:inputType="textCapCharacters"
+            android:padding="6dp"
+            android:text=""
+            android:textColor="@color/promo_background"
+            android:textColorHint="@color/disable_text"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnPromo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corners_button"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="5dp"
+            android:text="Apply"
+            android:textColor="@color/buttoncolor_inverse"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

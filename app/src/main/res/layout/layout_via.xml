@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titlet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/via"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeuib"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Via"
+            android:textColor="@color/app_bg_white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/via"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="7dp"
+            android:text="GATWICK AIRPORT NORTH GATWICK AIRPORT NORTH"
+            android:textColor="@color/color_white_inverse"
+            android:textSize="8dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/belowline"
+        android:layout_width="2dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/titlet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:backgroundTint="@color/red" />
+
+    <ImageView
+        android:id="@+id/stickIv"
+        android:layout_width="1.7dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/belowline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:background="@color/red" />
+
+</RelativeLayout>

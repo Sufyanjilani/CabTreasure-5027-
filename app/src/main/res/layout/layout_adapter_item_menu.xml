@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/color_gray_and_footer_inverse"
+    android:paddingLeft="10dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_home"
+        android:tint="@color/app_white" />
+
+    <TextView
+        android:id="@+id/menuTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-2dp"
+        android:fontFamily="@font/seguisb"
+        android:gravity="left|center_vertical"
+        android:text="Promotion"
+        android:textColor="@color/app_white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/avatar_circle"
+        android:backgroundTint="@color/red"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="3"
+        android:textColor="@color/app_bg_white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>

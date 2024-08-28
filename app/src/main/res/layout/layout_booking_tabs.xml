@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLyt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_and_white_inverse"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white_inverse"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/currTab"
+                        android:src="@drawable/ic_schedule"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/currTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Scheduled"
+                        android:textAllCaps="true"
+                        android:textColor="@color/footerBack"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/currLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/currTab"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/footerBack" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e3eaeaea"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/HistoryTab"
+                        android:src="@drawable/ic_history"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/HistoryTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="History"
+                        android:textAllCaps="true"
+                        android:textColor="@color/disable_text"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/HistoryLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/HistoryTab"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/footerBack"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/expandableListView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/transparent"
+                android:visibility="gone"
+                tools:listitem="@layout/layout_adapter_item_booking_list" />
+
+            <TextView
+                android:id="@+id/notfound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="No Bookings Available"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="2"
+                tools:listitem="@layout/layout_adapter_item_booking_list" />
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

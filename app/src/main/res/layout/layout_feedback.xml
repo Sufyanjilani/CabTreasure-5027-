@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_backspace" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/backIv"
+            android:fontFamily="@font/seguibl"
+            android:text="FeedBack"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/color_gray_and_light_inverse" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/color_white_inverse"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rateYourTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Rate Your  Trip"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="26sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/segoeuil"
+                        android:text="Are you satisfied with the service?"
+                        android:textColor="#666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/addATipTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/oval"
+                        android:backgroundTint="#eee"
+                        android:fontFamily="@font/segoeuil"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="Add a tip"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <include layout="@layout/layout_driver_info_part" />
+
+                <RatingBar
+                    android:theme="@style/RatingBar"
+                    android:rating="3.5"
+
+                    android:id="@+id/mainRatingBar"
+                    android:isIndicator="false"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ratingHead"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/color_gray_and_light_inverse" />
+
+                <include layout="@layout/layout_bottom_sheet_tip" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/color_gray_and_light_inverse" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/segoeuil"
+                    android:text="How was the ride?"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/overAllService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/oval"
+                        android:backgroundTint="#666"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="6dp"
+                        android:text="Overall Service"
+                        android:textColor="#fff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/overAllService"
+                        android:background="@drawable/oval"
+                        android:backgroundTint="#666"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="6dp"
+                        android:text="Customer Support"
+                        android:textColor="#fff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/speedAndEfficiencyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/overAllService"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/oval"
+                        android:backgroundTint="#666"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="6dp"
+                        android:text="Speed and Efficiency"
+                        android:textColor="#fff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/overAllService"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_toRightOf="@+id/speedAndEfficiencyTv"
+                        android:background="@drawable/oval"
+                        android:backgroundTint="#666"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="6dp"
+                        android:text="Repair Quality"
+                        android:textColor="#fff"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/segoeuil"
+                    android:text="Enter feedback"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/feedbackedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rounded_corners_phone"
+                    android:focusedByDefault="false"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="left"
+                    android:hint="Enter your message here.."
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:minLines="4"
+                    android:padding="10dp"
+                    android:textColor="@color/color_black_inverse"
+                    android:textColorHint="#B6B6B6"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/skipCv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toLeftOf="@+id/doneCv"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/color_inverse_black_footerBack"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="1dp">
+
+                        <TextView
+                            android:id="@+id/skipTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/seguisb"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Skip"
+                            android:textAllCaps="true"
+                            android:textColor="@color/color_white_inverse"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="2dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/doneCv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/skipCv"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/color_inverse_black_footerBack"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="1dp">
+
+                        <TextView
+                            android:id="@+id/doneTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/seguisb"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Done"
+                            android:textAllCaps="true"
+                            android:textColor="@color/color_white_inverse"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>

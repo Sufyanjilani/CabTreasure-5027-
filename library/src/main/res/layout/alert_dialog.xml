@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loading"
+    android:layout_width="@dimen/alert_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/custom_image"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="@string/dialog_default_title"
+        android:textColor="#575757"
+        android:textSize="19sp" />
+
+    <FrameLayout
+        android:id="@+id/error_frame"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/error_circle" />
+
+        <ImageView
+            android:id="@+id/error_x"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:src="@drawable/error_center_x" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/update_frame"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-30dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/update_x"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/updated"
+            android:tint="@color/success_stroke_color" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/success_frame"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/success_bow" />
+
+        <View
+            android:id="@+id/mask_right"
+            android:layout_width="35dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-13dp"
+            android:background="@android:color/white" />
+
+        <View
+            android:id="@+id/mask_left"
+            android:layout_width="21dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="-3dp"
+            android:background="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/success_circle" />
+
+        <cn.pedant.SweetAlert.SuccessTickView
+            android:id="@+id/success_tick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/warning_frame"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/warning_circle" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:src="@drawable/warning_sigh" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/edit_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/not_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_corners_phone"
+            android:drawableTint="@color/active"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:hint="Enter Driver Notes"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="4"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="28dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/text_heading"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/clearall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingTop="15dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="15dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/edit_viaframe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <EditText
+                android:id="@+id/via_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/rounded_corners_phone"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="left"
+                android:hint="Enter Your Name"
+
+                android:padding="5dp"
+                android:textColor="@color/text_heading"
+                android:textSize="14sp"
+                android:visibility="visible"
+
+                />
+
+            <EditText
+                android:id="@+id/via_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_corners_phone"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="left"
+                android:hint="Enter Your Mobile No"
+                android:inputType="numberSigned"
+                android:padding="5dp"
+                android:textColor="@color/text_heading"
+                android:textSize="14sp"
+                android:visibility="visible"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/warning_sigh"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/edit_flightframe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/flight_notinp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/rounded_corners_phone"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="left"
+                android:hint="Enter Flight Number"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:textColor="@color/text_heading"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/flight_coming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_corners_phone"
+                android:drawableLeft="@drawable/ic_pin"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="left"
+                android:hint="Coming From?"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:textColor="@color/text_heading"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@drawable/ic_building"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Already at airport?"
+                    android:textColor="@color/text_heading"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+
+                    />
+
+                <RadioGroup
+                    android:id="@+id/airportGrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/yesRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/text_content"
+                        android:padding="5dp"
+                        android:text="Yes"
+                        android:textColor="@color/text_content"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/noRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/text_content"
+                        android:checked="true"
+                        android:padding="5dp"
+                        android:text="No"
+                        android:textColor="@color/text_content"
+                        android:textSize="12sp" />
+                </RadioGroup>
+                <!--<belka.us.androidtoggleswitch.widgets.ToggleSwitch-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--custom:textToggleLeft="YES"-->
+                <!--custom:toggleWidth="60dp"-->
+                <!--android:id="@+id/toggleSwitch"-->
+                <!--custom:textToggleRight=p.getNo()/>-->
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/warning_sigh"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/list_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+
+        <include layout="@layout/vehicles_dialogue" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:src="@drawable/warning_sigh"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    //
+    <FrameLayout
+        android:id="@+id/progress_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="9dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:progress="70"
+            android:indeterminateTint="@color/success_stroke_color"
+            android:id="@+id/progressWheel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+
+            />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#797979"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/confirm_button"
+            style="@style/dialog_blue_button"
+            android:layout_marginRight="10dp"
+            android:text="@string/dialog_ok" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/dialog_blue_button"
+            android:background="@drawable/gray_button_background"
+            android:text="@string/dialog_cancel"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

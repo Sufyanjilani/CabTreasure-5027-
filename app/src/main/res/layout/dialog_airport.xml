@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:background="#000" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/seguisb"
+                android:text="Flight Details"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/flightNoEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/all_round_lite"
+                android:backgroundTint="#F4F4F4"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_airplane"
+                android:drawablePadding="10dp"
+                android:drawableTint="#000"
+                android:fontFamily="@font/segoeui"
+                android:hint="Enter Flight Number"
+                android:padding="7dp"
+                android:text=""
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/comingFromEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/all_round_lite"
+                android:backgroundTint="#F4F4F4"
+                android:drawableLeft="@drawable/ic_pin"
+                android:drawablePadding="10dp"
+                android:drawableTint="#000"
+                android:fontFamily="@font/segoeui"
+                android:hint="Enter City"
+                android:padding="7dp"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/seguisb"
+                android:text="After how many minutes to meet the driver from the landing time?"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/minutesEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/all_round_lite"
+                android:backgroundTint="#F4F4F4"
+                android:drawableLeft="@drawable/ic_baseline_access_time_filled_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="#000"
+                android:textSize="18sp"
+                android:fontFamily="@font/segoeui"
+                android:hint="Enter Minutes"
+                android:inputType="number"
+                android:padding="7dp"
+                android:text=""
+                android:textColor="#000" />
+
+
+            <LinearLayout
+                android:id="@+id/buttonLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="7dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/leftTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_round_lite"
+                    android:backgroundTint="#C64343"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="Done"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:id="@+id/rightTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_round_lite"
+                    android:backgroundTint="#6A6969"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="Cancel"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

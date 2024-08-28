@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:minWidth="250dp"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/userPicCv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="50dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/userPic"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/userprofile" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/editLabel"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignRight="@id/userpiccard"
+                    android:layout_alignBottom="@id/userpiccard"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/avatar_circle"
+                    android:elevation="5dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_edit"
+                    android:tint="@color/app_white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/removePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/ic_delete_forever_black_24dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/remove_profile_picture"
+                android:textColor="@color/text_content"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/nameLayoutRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/profileIv"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_user"
+                    android:tint="@color/app_color_primary_white" />
+
+                <TextView
+                    android:id="@+id/nameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/profileIv"
+
+                    android:text="Name"
+                    android:textColor="@color/app_color_primary_white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/seguisb"
+                    />
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/profileIv"
+
+                    android:fontFamily="@font/seguisb"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mobileLayoutRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/callIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_call"
+                    android:tint="@color/app_color_primary_white"
+                  />
+
+                <TextView
+                    android:id="@+id/mobileLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/callIv"
+                    android:textColor="@color/app_color_primary_white"
+                    android:text="Mobile"
+
+                    android:textSize="16sp"
+                    android:fontFamily="@font/seguisb" />
+
+                <TextView
+                    android:id="@+id/txtMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobileLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/callIv"
+
+                    android:text="+44 000 000 0000"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/seguisb"
+                  />
+
+                <ImageView
+                    android:id="@+id/edit_phone_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="15dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_edit"
+                    android:tint="@color/color_black_inverse" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emailLayoutRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/emailIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+
+                    android:src="@drawable/ic_email_outline"
+                    android:tint="@color/app_color_primary_white" />
+
+                <TextView
+                    android:id="@+id/emailLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/emailIv"
+                    android:textColor="@color/app_color_primary_white"
+                    android:text="Email"
+
+                    android:textSize="16sp"
+                    android:fontFamily="@font/seguisb"/>
+
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emailLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/emailIv"
+                    android:text="Email@gmail.com"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/seguisb" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/changePasswordRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/lockIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_lock"
+                    android:tint="@color/app_color_primary_white"/>
+
+                <TextView
+                    android:id="@+id/changePasswordLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/lockIv"
+
+                    android:text="Change Password"
+                    android:textColor="@color/app_color_primary_white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/seguisb"/>
+
+                <TextView
+                    android:id="@+id/changePasswordSubLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/changePasswordLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lockIv"
+
+                    android:text="Tap here to change password"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/seguisb" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/deleteAccountRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_delete"
+                    android:tint="@color/app_color_primary_white"/>
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/ivDelete"
+                    android:text="Delete Account"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/seguisb" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/active" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="-5.5dp"
+                android:layout_height="wrap_content">
+                <include layout="@layout/layout_home_work" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

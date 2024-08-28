@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_map" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-22dp"
+        app:cardBackgroundColor="@color/color_card_inverse"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_back__" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/iconIv"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_pin"
+                    android:tint="@color/color_black_inverse" />
+
+                <TextView
+                    android:id="@+id/setFromTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_toRightOf="@+id/iconIv"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="start"
+                    android:text="Pick Up"
+                    android:textColor="@color/color_inverse_black_footerBack"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/setArrTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/setFromTv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/iconIv"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="Getting Location .."
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/color_inverse_black_footerBack"
+        android:elevation="10dp"
+        android:fontFamily="@font/seguisb"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Done"
+        android:textAllCaps="true"
+        android:textColor="@color/buttoncolor_inverse"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/currentLocationCv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="@color/color_white_inverse"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp">
+
+        <ImageView
+
+            android:id="@+id/currentLocationIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shoppingnotice"
+            android:padding="10dp"
+            android:src="@drawable/ic_my_location"
+            android:tint="@color/color_black_inverse" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confirmBtn"
+        android:layout_below="@+id/headerRl"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            style="@style/entryScreenDescriptionStyle"
+            android:gravity="center"
+            android:text="Enter the 4 digit verification code you recieved from us via sms to"
+            android:textColor="@color/color_black_inverse"
+          />
+
+        <TextView
+            android:id="@+id/phoneNoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_horizontal"
+           android:textSize="20sp"
+            android:text="07700651151"
+            android:textColor="@color/color_black_inverse"
+         />
+
+        <com.mukesh.OtpView
+            android:id="@+id/squareField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/segoeui"
+            android:inputType="number"
+            android:textColor="@color/footerBack"
+            android:textSize="24sp"
+            app:OtpItemCount="4"
+            app:OtpItemWidth="40dp"
+            app:OtpLineColor="@color/footerBack"
+            app:OtpViewType="rectangle"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/resendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/segoeui"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Resend Code"
+            android:textColor="@color/drvNotesBack"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/resendLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/resendCodeAfterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Resend Code after "
+                style="@style/entryScreenDescriptionStyle"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                />
+
+            <TextView
+                android:id="@+id/resendCodeTimerTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="54"
+                android:textAllCaps="true"
+                android:textColor="@color/drvNotesBack"
+                style="@style/entryScreenDescriptionStyle"
+
+                />
+
+            <TextView
+                android:id="@+id/secondsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="seconds"
+                style="@style/entryScreenDescriptionStyle"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                 />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/color_inverse_black_footerBack"
+    style="@style/entryScreenButtonStyle"
+        android:text="Confirm"
+        android:textColor="@color/buttoncolor_inverse"
+     />
+
+</RelativeLayout>

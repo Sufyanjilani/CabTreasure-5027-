@@ -1,0 +1,35 @@
+<resources>
+
+  
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- API 11 theme customizations can go here. -->
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="colorPrimaryDark">@color/app_border</item>
+      <!--  <item name="stickyListHeadersListViewStyle">@style/Widget.MyApp.ListView</item>-->
+    </style>
+<!--    <item name="android:windowBackground">@drawable/background</item>-->
+
+    <style name="splashBase" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/app_border</item>
+       <!-- <item name="stickyListHeadersListViewStyle">@style/Widget.MyApp.ListView</item>-->
+
+    </style>
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="MyEditTextStyle2" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">#fff</item>
+        <item name="colorControlNormal">#fff</item>
+
+
+    </style>
+    <style name="Widget.MyApp.ListView" parent="@android:style/Widget.ListView">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+</resources>

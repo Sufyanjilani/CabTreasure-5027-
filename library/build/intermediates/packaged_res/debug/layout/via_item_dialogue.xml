@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+
+    android:clickable="true"
+    app:cardBackgroundColor="#fff"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:background="@color/active"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+
+                android:visibility="gone"
+            android:orientation="vertical"
+           android:padding="5dp">
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_corners_piv"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:text="2"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+
+                android:padding="10dp"
+            android:orientation="vertical"
+           >
+            <TextView
+                android:id="@+id/carnamelabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/seguisb"
+                android:gravity="center"
+                android:text="Via Address"
+                android:textColor="@color/subtext_color"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/viatxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/seguisb"
+
+                android:text="Heathrow Airport Terminal 1"
+                android:textColor="@color/text_heading"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/carname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:text="Saloon"
+            android:visibility="gone"
+            android:textColor="@color/text_heading"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/carFares"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:text="$14.4"
+            android:visibility="gone"
+            android:textColor="@color/text_heading"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/delvia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+
+            android:layout_weight=".5"
+            android:src="@drawable/ic_delete_forever_black_24dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

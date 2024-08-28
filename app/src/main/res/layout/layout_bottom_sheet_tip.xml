@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_more_gray_and_white_inverse"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/heightV"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/tipRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/closeBottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_close"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/driverNameForTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Add a tip"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tip1Tv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/driverNameForTip"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/tip2Tv"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/color_gray_and_light_inverse"
+            android:gravity="center"
+            android:text="$1"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tip2Tv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/driverNameForTip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/color_gray_and_light_inverse"
+            android:gravity="center"
+            android:text="$2"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tip3Tv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/driverNameForTip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tip2Tv"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/color_gray_and_light_inverse"
+            android:gravity="center"
+            android:text="$5"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/clickTipTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip2Tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:padding="5dp"
+            android:text="Enter custom amount"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/editableRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip2Tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bordered_button"
+            android:backgroundTint="@color/color_gray_and_light_inverse"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/getTipTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/doneIv"
+                android:background="@android:color/transparent"
+                android:backgroundTint="#eee"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:hint="Enter custom amount"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#666"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/doneIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rounded_circle"
+                android:backgroundTint="#666"
+                android:padding="5dp"
+                android:src="@drawable/ic_done" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setTextRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip2Tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tip"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/setTipTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:backgroundTint="#eee"
+                android:fontFamily="sans-serif-medium"
+                android:hint="Enter custom amount"
+                android:paddingLeft="4dp"
+                android:text="Tip total: $1.00"
+                android:textColor="@color/app_bg_white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/clearIv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/setTipTv"
+                android:background="@drawable/rounded_circle"
+                android:backgroundTint="@color/app_bg_white"
+                android:padding="6dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/app_black" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/addATipTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/color_inverse_black_footerBack"
+        android:elevation="2dp"
+        android:fontFamily="@font/seguisb"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Continue"
+        android:textColor="@color/color_white_inverse"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>
+

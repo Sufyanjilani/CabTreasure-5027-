@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadius="0dp"
+    android:shape="rectangle"
+    android:thicknessRatio="2"
+    android:useLevel="false">
+
+    <gradient
+        android:angle="90"
+        android:centerColor="@color/color_inverse_black_footerBack"
+        android:endColor="@color/footerBack"
+        android:startColor="@color/color_inverse_black_footerBack"
+        android:type="linear" />
+
+</shape>

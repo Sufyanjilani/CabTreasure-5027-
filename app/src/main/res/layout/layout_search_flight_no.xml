@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    app:behavior_hideable="false">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/closeBottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:src="@drawable/ic_back__" />
+
+        <TextView
+            android:id="@+id/promotitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:text="Search Flight"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:weightSum="5">
+
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_label"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="Expired"
+                android:textColor="@color/app_white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/segoeui"
+                android:text="Enter Flight Number"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/flightNoEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/flight_outline"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/color_black_inverse"
+                android:focusable="true"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_vertical"
+                android:hint="for e.g QR 200"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapCharacters"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#B6B6B6"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/selectDateTimeH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/segoeui"
+                android:text="Select Date"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/dateTimeEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/flight_outline"
+                android:drawableRight="@drawable/ic_filled_arrow"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/color_black_inverse"
+                android:focusable="true"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_vertical"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapCharacters"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#B6B6B6"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/main"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/outlineaboutweb"
+        android:backgroundTint="@color/color_gray_and_footer_inverse">
+
+        <RelativeLayout
+            android:id="@+id/buttonTextRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/color_gray_and_footer_inverse"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center_vertical"
+                android:text="Search"
+                android:textAllCaps="false"
+                android:textColor="@color/app_bg_white"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/sIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv"
+                android:backgroundTint="@color/app_bg_white"
+                android:src="@drawable/ic_search"
+                android:tint="@color/app_bg_white" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/flightProgressBar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:elevation="10dp"
+            android:indeterminateTint="@color/app_bg_white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/headingList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchButton"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/segoeui"
+        android:text="List"
+        android:textColor="#666"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headingList"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="10dp"
+        tools:listitem="@layout/layout_adapter_item_flight_no" />
+
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/filghtProgreeBar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:visibility="gone" />-->
+
+
+</RelativeLayout>

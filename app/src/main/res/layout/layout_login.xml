@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_design" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lyt_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/segoeuisl"
+                android:text="Already have an account? "
+                android:textColor="#7A7979"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/segoeuib"
+                android:text="Login Now!"
+                android:textColor="@color/app_black"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loginLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+            android:layout_marginTop="140dp"
+            android:text="login"
+            android:textAllCaps="true"
+            style="@style/entryScreenHeadingStyle"
+            android:textColor="@color/color_black_inverse"
+     />
+
+        <TextView
+            android:id="@+id/loginDetailLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginLabelTv"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:fontFamily="@font/segoeui"
+            android:text="Please login with your valid email and password"
+            android:textAllCaps="false"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/center_center"
+            android:layout_below="@+id/loginLabelTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/emailEt"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_outline_email"
+                android:drawableRight="@drawable/ic_close"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/footerBack"
+                android:focusable="true"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="@color/hintTextColor"
+                style="@style/inputTextStyle"
+               />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/layout_view" />
+
+                <View
+                    android:id="@+id/view_line_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/rounded_corners_asapbox"
+                    android:backgroundTint="@color/footerBack"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/passEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/footerBack"
+                    android:focusable="true"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_black_inverse"
+                    android:textColorHint="@color/hintTextColor"
+                    style="@style/inputTextStyle"
+                  />
+
+                <ImageView
+                    android:id="@+id/toggleImageForPasswordIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_visibility_off_black_24dp"
+                    android:tint="@color/footerBack" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/layout_view" />
+
+                <View
+                    android:id="@+id/view_line_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/rounded_corners_asapbox"
+                    android:backgroundTint="@color/footerBack"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forgetPassTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="Forgot Password?"
+                android:textColor="@color/color_footer__white_inverse"
+                android:visibility="visible"
+                style="@style/entryScreenDescription2Style"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <include layout="@layout/layout_button_with_progress" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--
+        <RelativeLayout
+            android:id="@+id/headingLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_innertopcurveIv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="-28dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_innertopcurve" />
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="goBack"
+                android:padding="16dp"
+                android:src="@drawable/ic_backspace"
+                android:tint="#252A30" />
+
+
+
+
+        </RelativeLayout>
+    -->
+
+</RelativeLayout>

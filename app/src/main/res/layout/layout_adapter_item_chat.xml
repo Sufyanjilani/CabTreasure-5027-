@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/mainRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeui"
+            android:maxLines="2"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="14sp"
+            tools:text="Coming From Istambul" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTv"
+            android:layout_marginTop="-6dp"
+            android:fontFamily="@font/segoeui"
+            android:maxLines="2"
+            android:textAllCaps="true"
+            android:textColor="#666"
+            android:textSize="8sp"
+            tools:text="Mon, 24 Aug 2021" />
+
+        <ImageView
+            android:id="@+id/checkStatusIv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/dateTv"
+            android:src="@drawable/ic_check"
+            app:tint="@color/grey_background" />
+    </RelativeLayout>
+
+</RelativeLayout>

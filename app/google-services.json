@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "189811579466",
+    "project_id": "claines-cars",
+    "storage_bucket": "claines-cars.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189811579466:android:0453d90c46c18246baa4b3",
+        "android_client_info": {
+          "package_name": "com.eurosofttech.cab_treasure_uk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189811579466-srmkq9h1bhdembcerpd7fo03vsj0bsj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfVT556CSE2JvVBpHuB0rs_TXv0-FjXAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189811579466-srmkq9h1bhdembcerpd7fo03vsj0bsj5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "189811579466-m10u6n760aa5hm6cdn73444irq8afbk3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.euro.Clainescars"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

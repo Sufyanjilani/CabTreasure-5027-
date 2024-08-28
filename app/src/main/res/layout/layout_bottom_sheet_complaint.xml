@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_more_gray_and_white_inverse"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="60dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="4.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/gray_btn_bg_pressed_color" />
+
+    <TextView
+        android:id="@+id/promotitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:fontFamily="@font/segoeuib"
+        android:gravity="center"
+        android:text="Add Order Details"
+        android:textAllCaps="true"
+        android:textColor="@color/color_black_inverse"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/segoeui"
+        android:text="Enter Description"
+        android:textColor="@color/color_black_inverse"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/descriptionEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/flight_outline"
+        android:focusedByDefault="false"
+        android:fontFamily="@font/segoeui"
+        android:gravity="left"
+        android:hint="Type your message here.."
+        android:inputType="textCapSentences|textMultiLine"
+        android:minLines="4"
+        android:padding="10dp"
+        android:textColor="@color/color_black_inverse"
+        android:textColorHint="#B6B6B6"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/rounded_corners_asapfilled"
+        android:backgroundTint="@color/color_inverse_black_footerBack"
+        android:elevation="2dp"
+        android:fontFamily="@font/seguisb"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingTop="8dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:text="Done"
+        android:textColor="@color/buttoncolor_inverse"
+        android:textSize="16sp" />
+
+</LinearLayout>

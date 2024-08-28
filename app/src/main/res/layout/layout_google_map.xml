@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mapViewRl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/home_part_2_cv">
+
+    <!--    <FrameLayout
+            android:id="@+id/map_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+
+    <include layout="@layout/layout_map" />
+
+    <!--Menu-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/color_white_inverse"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp">
+
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shoppingnotice"
+            android:padding="8dp"
+            android:src="@drawable/ic_person"
+            android:tint="@color/color_black_inverse" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!--Menu-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/currentLocationCv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="@color/color_white_inverse"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp">
+
+        <ImageView
+            android:id="@+id/currentLocationIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shoppingnotice"
+            android:padding="10dp"
+            android:src="@drawable/ic_my_location"
+            android:tint="@color/color_black_inverse" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

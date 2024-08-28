@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/via_list_layout"
+    android:background="@color/form_field_bg" >
+
+    <ImageView
+        android:id="@+id/btnMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/txtAddressVia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dip"
+        android:layout_toRightOf="@+id/btnMinus"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textColor="@color/form_field_text_white" />
+
+</RelativeLayout>

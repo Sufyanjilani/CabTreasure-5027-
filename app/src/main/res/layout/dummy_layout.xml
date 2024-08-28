@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll">
+
+
+
+        <com.amalbit.trail.RouteOverlayView
+            android:id="@+id/mapOverlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/center_markerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/marker_center_pin"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/stickIv"
+                        android:visibility="gone"
+                        android:layout_width="1.7dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/color_inverse_black_footerBack" />
+
+                    <ImageView
+                        android:id="@+id/topIv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_above="@+id/stickIv"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="@color/color_white_inverse"
+                        android:src="@drawable/circle_pin"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/stickIv"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_location_pin"
+                        android:backgroundTint="@color/color_inverse_black_footerBack"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:id="@+id/totalTimeForArrival"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="N/A"
+
+                            android:textColor="@color/color_white_inverse"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/subname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/name"
+                            android:layout_marginTop="-5dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="mins"
+                            android:textColor="@color/color_white_inverse"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_above="@+id/stickIv"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/workIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_home_location"
+                            android:tint="@color/color_white_inverse"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:1:1-10:12
+	package
+		ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:2:1-31
+		INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml
+		INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:4:1-26
+	xmlns:android
+		ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:3:1-24
+uses-sdk
+ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:1-42
+INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:1-42
+INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:1-42
+INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:1-42
+INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:1-42
+	android:targetSdkVersion
+		ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:11-40
+		INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml
+		INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml
+		ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:6:1-42
+		INJECTED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml
+application
+ADDED from D:\GenralApp\UK\CabTreasure(5027)\library\src\main\AndroidManifest.xml:8:1-16

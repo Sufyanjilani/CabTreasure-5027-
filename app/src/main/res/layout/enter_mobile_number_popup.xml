@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20sp"
+    android:paddingBottom="20sp"
+    android:paddingRight="20sp"
+    android:paddingLeft="20sp">
+
+
+    <TextView
+        android:id="@+id/tvMobileHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Mobile Number:"
+        android:textSize="16sp"
+        android:layout_marginBottom="15sp"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_centerHorizontal="true" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/etMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMobileHeading"
+        android:hint="07xxxxxxxxx"
+        android:maxLength="11"
+        app:met_maxCharacters="11"
+        android:inputType="number"
+        app:met_floatingLabel="normal"
+        app:met_helperText="Enter a valid mobile number."
+        app:met_primaryColor="@color/app_secondary"
+        android:textCursorDrawable="@color/app_secondary"
+        app:met_textColor="@color/app_text_black"
+        app:met_errorColor="@color/red_textcolor"
+        app:met_helperTextColor="#795548"
+        app:met_floatingLabelTextColor="@color/app_secondary"/>
+    <!--app:met_baseColor="@color/app_main"-->
+    <!--app:met_underlineColor="#003587"-->
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white_inverse"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/drwIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/avatar_circle"
+        android:backgroundTint="@color/color_footer_light_more_gray_inverse"
+        android:padding="9dp"
+        android:src="@drawable/ic_pin"
+        android:visibility="visible"
+        app:tint="@color/color_inverse_black_footerBack" />
+
+    <!--    E4E4E4-->
+    <LinearLayout
+        android:id="@+id/centerLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/drwIcon"
+        android:orientation="vertical"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:maxLines="2"
+            android:text="Baba Fish, Azizabad, Karachi"
+            android:textAllCaps="false"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:textAllCaps="true"
+            android:textColor="#666"
+            android:textSize="15sp"
+            tool:text="sl4 3bx" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/centerLl"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/drwIcon"
+        android:background="@color/color_card_inverse" />
+
+</RelativeLayout>

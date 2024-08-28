@@ -1,0 +1,265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_design" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sub"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-45dp"
+            android:text="Account Details"
+            android:textAllCaps="true"
+            style="@style/entryScreenHeadingStyle"
+            android:background="@color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/center_center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="@color/app_black"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:id="@+id/center_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/accountLogoutLayoutLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seguisb"
+                        android:text="Account Name : "
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/accname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seguisb"
+                        android:text=""
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/accountLogoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/oval_border"
+                    android:backgroundTint="@color/color_gray_and_red_inverse"
+                    android:fontFamily="@font/seguisb"
+                    android:padding="10dp"
+                    android:text="Logout"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_bg_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountLoginLayoutLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/accountTitle"
+                    android:textAlignment="center"
+                    style="@style/entryScreenDescriptionStyle"
+
+
+                 />
+
+                <EditText
+                    android:id="@+id/accountIdEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawableRight="@drawable/ic_close"
+                    android:focusable="true"
+                    android:hint="Enter Account id"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textAllCaps="true"
+                    style="@style/inputTextStyle"
+
+                  />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/layout_view" />
+
+                    <View
+                        android:id="@+id/view_line_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/rounded_corners_asapbox"
+                        android:backgroundTint="@color/color_inverse_black_footerBack"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <EditText
+                    android:id="@+id/accountLoginIdEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawableRight="@drawable/ic_close"
+                    android:focusable="true"
+                    android:hint="Enter Account Login id"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    style="@style/inputTextStyle"
+                    android:textAllCaps="true"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/layout_view" />
+
+                    <View
+                        android:id="@+id/view_line_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/rounded_corners_asapbox"
+                        android:backgroundTint="@color/color_inverse_black_footerBack"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/accountPasswordEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_lock"
+                        style="@style/inputTextStyle"
+                        android:focusable="true"
+                        android:hint="Password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:text=""
+                        android:textAllCaps="true"
+
+                      />
+
+                    <ImageView
+                        android:id="@+id/toggleImageForPasswordIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_visibility_off_black_24dp"
+                        android:tint="@color/color_inverse_black_footerBack" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/layout_view" />
+
+                    <View
+                        android:id="@+id/view_line_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/rounded_corners_asapbox"
+                        android:backgroundTint="@color/color_inverse_black_footerBack"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/accountLoginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/oval_border"
+                    android:backgroundTint="@color/color_inverse_black_footerBack"
+                 style="@style/entryScreenButtonStyle"
+                    android:padding="10dp"
+                    android:text="Add Account"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_white_inverse"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

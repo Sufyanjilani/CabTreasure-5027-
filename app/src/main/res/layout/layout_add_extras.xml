@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:src="@drawable/ic_back__" />
+
+        <TextView
+            android:id="@+id/promotitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/segoeuib"
+            android:gravity="center"
+            android:text="Extras"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:weightSum="5">
+
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_label"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="Expired"
+                android:textColor="@color/app_white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:id="@+id/not_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/rounded_corners_phone"
+                android:focusedByDefault="false"
+                android:fontFamily="@font/segoeui"
+                android:gravity="left"
+                android:hint="Enter Driver Notes"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minLines="4"
+                android:padding="10dp"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#B6B6B6"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/extraList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                card_view:itemCount="3"
+                card_view:listitem="@layout/extras_child" />
+
+            <LinearLayout
+                android:id="@+id/faresLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/extrasJourneyChargesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui"
+                        android:gravity="center"
+                        android:text="(Journey Charges)"
+                        android:textColor="#666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/journeyTotalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/extrasJourneyChargesLabel"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/segoeui"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="+"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/extrasExtraChargesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/segoeui"
+                        android:gravity="center"
+                        android:text="(Extra Charges)"
+                        android:textColor="#666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/totalExtras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/extrasExtraChargesLabel"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/segoeui"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="="
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/grandtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnPromo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="210dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/color_inverse_black_footerBack"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <TextView
+                    android:id="@+id/doneBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Done"
+                    android:textAllCaps="true"
+                    android:textColor="@color/app_white"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

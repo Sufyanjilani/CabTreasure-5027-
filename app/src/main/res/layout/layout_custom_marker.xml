@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/belowline"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+
+        android:layout_below="@+id/titlet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/rounded_corners_done"
+        android:backgroundTint="@color/app_black" />
+    <ImageView
+        android:id="@+id/stickIv"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/belowline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:background="@color/app_black" />
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="20dp"
+      android:layout_below="@+id/stickIv"
+        android:src="@drawable/point"
+        android:tint="@color/color_inverse_black_footerBack"
+        android:layout_marginTop="-10dp"
+        />
+    <RelativeLayout
+
+        android:id="@+id/titlet"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/addressLyt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-25dp"
+            android:layout_toRightOf="@+id/rl"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/color_inverse_black_footerBack"
+            android:drawableTint="@color/app_bg_white">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:layout_centerVertical="true"
+
+                android:background="@color/transparent"
+       android:includeFontPadding="false"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="28dp"
+                android:text="GATWICK AIRPORT AIRPORT NORTH GATWI AIRPORT NORTH GATWI AIRPORT NORTH GATWI  NORTH GATWICK AIRPORT NORTH"
+                android:textColor="@color/color_white_inverse"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/arr"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:tint="@color/color_white_gray"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/title"
+                android:src="@drawable/dic_arrow"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/eta_pin_circle"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalTimeForArrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+android:textAllCaps="false"
+                android:text="0"
+                android:fontFamily="@font/segoeuib"
+                android:textColor="@color/app_white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/subname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="-5dp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center"
+                android:text="mins"
+                android:textColor="@color/app_white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

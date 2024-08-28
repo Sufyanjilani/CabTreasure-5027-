@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--ACCOUNT-->
+    <!--calander  -->
+    <!--EXTRAS-->
+    <!--SHOPPING-->
+    <!--ADD PROMO-->
+
+    <LinearLayout
+        android:id="@+id/showOrderSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/promoLyt_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/asaplyt2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/shopping_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_shopping"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:tint="@color/app_white"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/app_secondary_black"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvShoppingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Shopping"
+            android:textColor="@color/color_footer__white_inverse"
+            android:textSize="14sp"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DrvNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/asaplyt2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cash_s_lyt"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:padding="8dp"
+            android:tint="@color/app_white"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/app_secondary_black"
+            android:src="@drawable/extras_new"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/extrasLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:text="Notes"
+            android:textColor="@color/color_footer__white_inverse"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/asaplyt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/showOrderSheet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/DrvNotes"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:padding="8dp"
+            android:tint="@color/app_white"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/app_secondary_black"
+            android:src="@drawable/calendar_new"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/asaptxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/seguisb"
+            android:text="Book Later"
+            android:textColor="@color/color_footer__white_inverse"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:text="Schedule"
+            android:textColor="@color/color_footer__white_inverse"
+            android:textSize="14sp"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cash_s_lyt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/DrvNotes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/cashImg"
+
+            android:layout_width="wrap_content"
+
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/app_secondary_black"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:src="@drawable/cash"
+            android:tint="@color/app_white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cashtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+
+            android:singleLine="true"
+            android:text="Account"
+            android:textColor="@color/color_footer__white_inverse"
+
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/promoLyt_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/showOrderSheet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/promo_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/promo"
+            android:visibility="visible"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:tint="@color/app_white"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/app_secondary_black"
+         />
+
+        <TextView
+            android:id="@+id/promotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="+Remove Promo"
+            android:fontFamily="@font/seguisb"
+            android:textColor="@color/color_footer__white_inverse"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/promoLyt_"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/asaplyt2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:tint="@color/app_white"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/app_secondary_black"
+            android:src="@drawable/shopping"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/avatar_circle"
+            android:backgroundTint="#eee"
+            android:elevation="20dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_cash"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/shoppingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeui"
+            android:text="Shopping"
+            android:textColor="@color/color_footer__white_inverse"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_card_inverse"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/routeRr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="1dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_pin"
+            android:visibility="gone"
+            app:tint="@color/color_black_inverse" />
+
+        <RelativeLayout
+            android:id="@+id/lineRl"
+            android:layout_width="10dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="6dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/avatar_circle"
+                android:backgroundTint="@color/color_black_inverse"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/color_black_inverse" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toLeftOf="@+id/closeViaIv"
+        android:layout_toRightOf="@+id/routeRr"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/all_round">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/editTextCloseIv"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/segoeuil"
+                android:gravity="center_vertical|start"
+                android:hint="Search address"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapCharacters"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textColorHint="#AEACAC"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/editTextCloseIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:elevation="2dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_close"
+                android:tint="#B3B0B0" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fromToTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-5dp"
+            android:background="@color/color_card_inverse"
+            android:fontFamily="@font/segoeuib"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Pickup"
+            android:textAllCaps="true"
+            android:textColor="@color/color_inverse_black_footerBack"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/closeViaIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/color_black_inverse" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/closeViaIv"
+        android:background="#FDFDFD"
+        android:visibility="gone" />
+
+</RelativeLayout>

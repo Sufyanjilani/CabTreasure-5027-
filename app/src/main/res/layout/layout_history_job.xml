@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@color/color_white_inverse"
+        app:cardElevation="5dp"
+        app:contentPadding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_backspace"
+                android:tint="@color/color_black_inverse" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="-5dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="TRIP DETAILS"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="22sp"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--            MAP-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/color_white_inverse">
+
+        <include layout="@layout/layout_map" />
+
+        <TextView
+            android:id="@+id/recenterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/color_white_inverse"
+            android:drawableRight="@drawable/ic_nav"
+            android:elevation="4dp"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="6dp"
+            android:text="Re-center"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="11sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <!--            status-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/color_white_inverse"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="1dp"
+        app:contentPaddingBottom="10dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/barView"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="#666" />
+
+            <TextView
+                android:id="@+id/statusHeadingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/barView"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/seguisb"
+                android:text="Status"
+                android:textColor="#666"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/bookingStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusHeadingLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-5dp"
+                android:layout_toRightOf="@+id/barView"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="center"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="CANCELLED"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/bookingRefNoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookingStatusTv"
+                android:layout_toRightOf="@+id/barView"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/seguisb"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Booking Ref : TX4545445"
+                android:textAllCaps="true"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/paymentTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/segoeui"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="#666"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/faresTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paymentTypeTv"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-6dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/segoeuib"
+                android:text="$0.0"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/addATipTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/faresTv"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-8dp"
+                android:backgroundTint="#eee"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:paddingRight="10dp"
+                android:text="Add a tip"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/addATipTv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/blue"
+                android:paddingBottom="6dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_black_and_light_inverse">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <!--            driver and date-->
+
+            <!--            Address-->
+            <include layout="@layout/layout_date" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <include layout="@layout/layout_address_pickup_dropoff_via" />
+
+            <!--            driver-->
+            <LinearLayout
+                android:id="@+id/driverDetailCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/color_white_inverse"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/driverImageIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/avatar_circle"
+                    android:backgroundTint="@color/color_black_and_light_inverse"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_person" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/driveNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="18sp"
+                        tools:text="......" />
+
+                    <TextView
+                        android:id="@+id/ratingHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/driveNameTv"
+                        android:fontFamily="@font/segoeui"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="You Rated"
+                        android:textColor="@color/Green_textcolor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <RatingBar
+                        android:id="@+id/simpleRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingHead"
+                        android:visibility="visible"
+                        style="?android:attr/ratingBarStyleIndicator"
+                        />
+
+                    <TextView
+                        android:id="@+id/driverRatingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/driveNameTv"
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/color_black_inverse"
+                        android:textSize="8sp"
+                        android:visibility="gone"
+                        tools:text="4.9" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--            lost item-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/findLostItemCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/color_more_gray_and_white_inverse"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="1dp"
+                app:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/bcKeyIv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_car_key" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/bcKeyIv"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/driverImageIv"
+                            android:fontFamily="@font/seguisb"
+                            android:text="Find lost item"
+                            android:textColor="@color/color_black_inverse"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/driverImageIv"
+                            android:fontFamily="@font/seguisb"
+                            android:text="We can help you get in touch with your driver"
+                            android:textColor="#807F7F"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--            Report Issues-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/reportSafetyItemCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/color_more_gray_and_white_inverse"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="1dp"
+                app:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/bcShieldIv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_shield" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/bcShieldIv"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/driverImageIv"
+
+                            android:text="Report safety issue"
+                            android:fontFamily="@font/seguisb"
+                            android:textColor="@color/color_black_inverse"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/driverImageIv"
+                            android:fontFamily="@font/seguisb"
+                            android:text="Let us know if you have a safety"
+                            android:textColor="#807F7F"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

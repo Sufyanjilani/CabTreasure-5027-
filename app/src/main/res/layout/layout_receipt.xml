@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_and_light_inverse">
+
+    <ImageView
+        android:id="@+id/ic_toplargecurveIv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="-68dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_toplargecurve"
+
+         />
+
+    <RelativeLayout
+        android:id="@+id/headerDD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/closeBottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_backspace"
+            android:tint="@color/app_bg_white" />
+
+        <TextView
+            android:id="@+id/titleHeadingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/closeBottomSheet"
+            android:fontFamily="@font/segoeuib"
+            android:gravity="center"
+            android:text="TRIP SUMMARY"
+            android:textColor="@color/app_bg_white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleHeadingTv"
+            android:layout_marginTop="-5dp"
+            android:layout_toRightOf="@+id/closeBottomSheet"
+            android:fontFamily="@font/seguisb"
+            android:text="Minhaj Afzaal"
+            android:textColor="@color/app_bg_white"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/lostIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerDD"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="26dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_refcar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerDD"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/lostIv">
+
+        <TextView
+            android:id="@+id/totalHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/segoeuil"
+            android:text="Total"
+            android:textColor="@color/app_bg_white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/totalTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/totalHead"
+            android:fontFamily="@font/seguisb"
+            android:text="$00.00"
+            android:textColor="@color/app_bg_white"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_toplargecurveIv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tripFaresLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Trip Fares:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tripFaresTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tripFaresV"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/companyPriceLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Company Price:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/companyPriceTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/companyPriceV"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/extraChargesLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+
+                    android:fontFamily="@font/segoeui"
+                    android:text="Baby Seat Charge:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/extraChargesTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/extraChargesV"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/agentFeesLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Agent Fees:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/agentFeesTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+
+                    android:gravity="right"
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/agentFeesV"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/agentChargeLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Agent Charge:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/agentChargeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/agentChargeV"
+
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/congestionLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Congestion:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/congestionTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/congestionV"
+
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/parkingLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Parking Fees:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/parkingTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/parkingV"
+
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/waitingLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Waiting:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/waitingTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+
+                    android:text="$00.00"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/waitingV"
+
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/agentCommissionLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Agent Commission:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/agentCommissionTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/agentCommissionV"
+
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/surchargeAmountLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Surcharge Amount:"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/surchargeAmountTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="right"
+                    android:text="$00.00"
+
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

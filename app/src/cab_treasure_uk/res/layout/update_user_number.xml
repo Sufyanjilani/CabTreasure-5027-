@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_inverse"
+    android:minWidth="250dp"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/update_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text=""
+                android:textColor="@color/color_black_inverse"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/mobileLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/mobileLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeuib"
+                    android:text="Mobile Number"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="16sp"
+                   />
+
+                <TextView
+                    android:id="@+id/errMobile_"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/segoeuisl"
+                    android:text="Mobile No required"
+                    android:textColor="@color/errorColor"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <net.rimoto.intlphoneinput.IntlPhoneInput
+                    android:id="@+id/my_phone_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobileLabel"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:flagPaddingBottom="4dp"
+                    app:flagPaddingStart="10dp"
+                    app:flagPaddingTop="4dp"
+                    app:textColor="@color/app_black"
+                    app:textColorHint="#666"
+                    app:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/buttonWithProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+         android:layout_marginTop="40dp"
+                app:cardBackgroundColor="@color/color_inverse_black_footerBack"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/btnDone"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/seguisb"
+                        android:text="NEXT"
+                        android:textAllCaps="false"
+                        android:textColor="@color/buttoncolor_inverse"
+                        android:textSize="22sp"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/buttoncolor_inverse"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+<!--            <TextView-->
+<!--                android:id="@+id/btnDone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/oval_border"-->
+<!--                android:backgroundTint="@color/color_black_and_gray_inverse"-->
+<!--                android:fontFamily="@font/seguisb"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="Update"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/app_bg_white"-->
+<!--                android:textSize="18sp" />-->
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

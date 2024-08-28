@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_adminmenu_margintop" tools:ignore="MissingDefaultResource">0.51dp</dimen>
+    <dimen name="activity_adminmenu_rowheight">68dp</dimen>
+    <dimen name="adminheadingtxtsize">18sp</dimen>
+    <dimen name="admininnertxtsize">13sp</dimen>
+    <dimen name="CurrentJobLeftrightMargin">10dp</dimen>
+    <dimen name="CurrentJobMargintop">10dp</dimen>
+    <dimen name="CurrentJobbox_arrive">65dp</dimen>
+    <dimen name="CurrentJobxtrabuttonlay">65dp</dimen>
+
+</resources>

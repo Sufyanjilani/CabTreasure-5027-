@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners_dialogue">
+
+    <TextView
+        android:id="@+id/d_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/seguisb"
+        android:padding="10dp"
+        android:text="Verification"
+        android:textColor="@color/app_black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/d_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/d_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/segoeui"
+        android:gravity="center"
+        android:text="A sms verification code is sent to your number +070000000"
+        android:textColor="@color/app_black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/bottom_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/d_text"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/negativeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_bottomleft"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="No"
+            android:textColor="@color/app_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/positiveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_bottomright"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Yes"
+            android:textColor="@color/app_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

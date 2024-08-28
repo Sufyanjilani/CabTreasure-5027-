@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/color_gray_and_white_inverse"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/promotitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/segoeuiz"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="THIS IS PROMOTIONAL CODE TITLE "
+                android:textColor="@color/color_black_inverse"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_label"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="Expired"
+                android:textColor="@color/app_white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/promoCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:drawableRight="@drawable/ic_copy"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_horizontal"
+            android:text="CODE : GR32432"
+            android:textColor="@color/promo_background"
+            android:textSize="18sp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/promoMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="4dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="center_horizontal"
+            android:text="This is promo code message valid till 23:00 24-2-2019 max discount is 100"
+            android:textColor="@color/text_content"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/journeyLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_horizontal"
+            android:text="Journeys Left : 3/50"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/promostrtDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_horizontal"
+            android:text="Starts From 23:00 24-2-2019"
+
+            android:textColor="@color/Greencolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/promoEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_horizontal"
+            android:text="Valid till 23:00 24-2-2019"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/maxDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="right"
+            android:text="Maximum Discount : 50"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/minFares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="right"
+            android:text="Minimum fares to avail promotion : 50"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/apply_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/C_Time"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners_bottomtwo"
+            android:fontFamily="@font/segoeuiz"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="APPLY"
+            android:textColor="@color/app_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

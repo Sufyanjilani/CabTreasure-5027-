@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viaLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/dropOffRl"
+    android:layout_marginLeft="13dp"
+    android:layout_marginTop="8dp"
+    android:layout_toRightOf="@+id/pDRl"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/ViaHead"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/seguisb"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Via Point(s)"
+        android:textColor="#666"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/viaPointsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/segoeui"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text=""
+        android:textColor="@color/color_black_inverse"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/transactxt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/segoeui"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text=""
+        android:textColor="@color/slider_background"
+        android:textSize="12sp"
+        android:visibility="gone" />
+</LinearLayout>

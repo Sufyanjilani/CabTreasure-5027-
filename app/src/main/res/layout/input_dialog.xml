@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gray_and_white_inverse"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="0dp">
+
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/seguisb"
+            android:text="Note"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="22sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTv"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="After how many minutes to meet the driver from the landing time?"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subTitleTv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/segoeui"
+            android:text="Enter Time"
+            android:textColor="@color/color_black_inverse"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/flight_outline"
+            android:focusable="true"
+            android:fontFamily="@font/segoeui"
+            android:hint="For e.g 30 Mins"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:padding="10dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse"
+            android:textColorHint="#B6B6B6"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:id="@+id/confirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameEt"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/seguisb"
+            android:padding="18dp"
+            android:text="Save"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse" />
+
+        <TextView
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameEt"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/confirmBtn"
+            android:layout_weight="1"
+            android:fontFamily="@font/seguisb"
+            android:padding="18dp"
+            android:text="Skip"
+            android:textAllCaps="true"
+            android:textColor="@color/color_black_inverse" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

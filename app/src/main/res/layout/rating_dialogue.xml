@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDPic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-50dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/rat_drvImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="#666"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_person" />
+
+            <TextView
+                android:id="@+id/JT_drating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/cardDPic"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/rounded_rating"
+                android:fontFamily="@font/segoeui"
+                android:padding="3dp"
+                android:text="4.9"
+                android:textColor="@color/app_white"
+                android:textSize="8sp" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardDPic"
+            android:background="@drawable/rounded_corners_dialogue"
+            android:backgroundTint="@color/color_white_inverse">
+
+            <TextView
+                android:id="@+id/rat_drvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/segoeui"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="14sp"
+                tools:text="Galedhill" />
+
+            <LinearLayout
+                android:id="@+id/vehDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rat_drvName"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/JT_vehname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/JT_dname"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/segoeui"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="12sp"
+                    tools:text="Black Cab 8 Seater" />
+
+                <TextView
+                    android:id="@+id/JT_vehplate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/JT_dname"
+                    android:fontFamily="@font/segoeui"
+                    android:textColor="@color/subtext_color"
+
+                    android:textSize="12sp"
+                    tools:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtReference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehDetails"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/segoeui"
+                android:textColor="@color/color_black_inverse"
+                android:textSize="10sp"
+                tools:text="Booking Ref : TX142324" />
+
+            <LinearLayout
+                android:id="@+id/fareDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtReference"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_background" />
+
+                <TextView
+                    android:id="@+id/fare_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/JT_dname"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/seguisb"
+                    android:textColor="@color/text_heading"
+                    android:textSize="24sp"
+                    android:visibility="gone"
+                    tools:text="$324" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_background" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ratingLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fareDetails"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rateYourTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/JT_dname"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Rate your trip"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+
+                <RatingBar
+                    android:theme="@style/RatingBar"
+                    android:rating="3.5"
+                    android:id="@+id/simpleRatingBar"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/JT_dname"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Feedback"
+                    android:textColor="@color/color_black_inverse"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/feedbackinp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/simpleRatingBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_corners_phone"
+                    android:elevation="2dp"
+                    android:gravity="top"
+                    android:hint="Write your feedback here"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:lines="5"
+                    android:padding="8dp"
+                    android:textColor="@color/color_black_inverse"
+                    android:textColorHint="#666"
+                    android:textSize="14sp" />
+
+                <include layout="@layout/layout_bottom_sheet_tip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingLyt"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/skipfeedback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_bottomleft"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Skip"
+                    android:textColor="@color/app_white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/donefeedback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_bottomright"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Done"
+                    android:textColor="@color/app_white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

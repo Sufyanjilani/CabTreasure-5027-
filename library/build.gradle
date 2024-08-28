@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+//version = VERSION_NAME
+//group = GROUP
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+//    implementation 'com.pnikosis:materialish-progress:1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+//    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+//    implementation 'us.belka:androidtoggleswitch:1.2.2'
+}
+
+//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
